@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 
+#include <cassert>
 #include <string>
 #include <algorithm>
 #include <iostream>
@@ -23,19 +24,32 @@ int main(int argc, const char * argv[]) {
 		[wordList enumerateLinesUsingBlock:^(NSString *word, BOOL *stop) {
 			clock_t startTime, endTime;
 			
+			
 			startTime = clock();
-			CFBurstTrieAdd(burstTrie, (__bridge CFStringRef)word, CFRangeMake(0, [word length]), 0);
+			
+			bool success = CFBurstTrieAdd(burstTrie, (__bridge CFStringRef)word, CFRangeMake(0, [word length]), 1);
+			
 			endTime = clock();
 			burstTrieInsertElapsedTime += endTime - startTime;
 			
+			assert(success);
+			
+			
 			startTime = clock();
+			
 			[set addObject:word];
+			
 			endTime = clock();
 			setInsertElapsedTime += endTime - startTime;
 		}];
 		
 		cout << "CFBurstTrie insert: " << (double)burstTrieInsertElapsedTime / CLOCKS_PER_SEC << " seconds" << endl;
 		cout << "NSMutableSet insert: " << (double)setInsertElapsedTime / CLOCKS_PER_SEC << " seconds" << endl << endl;
+		
+		
+		for (NSString *word in set) {
+			assert(CFBurstTrieContains(burstTrie, (__bridge CFStringRef)word, CFRangeMake(0, [word length]), NULL));
+		}
 		
 		
 		NSMutableArray *stringsToTest = [NSMutableArray array];
