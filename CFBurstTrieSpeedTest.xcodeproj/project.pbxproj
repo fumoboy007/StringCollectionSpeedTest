@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E65765AD17B6E85900C44B61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65765AC17B6E85900C44B61 /* Foundation.framework */; };
-		E65765B017B6E85900C44B61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E65765AF17B6E85900C44B61 /* main.m */; };
+		E65765B017B6E85900C44B61 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E65765AF17B6E85900C44B61 /* main.mm */; };
 		E65765B417B6E85900C44B61 /* CFBurstTrieSpeedTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E65765B317B6E85900C44B61 /* CFBurstTrieSpeedTest.1 */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +28,12 @@
 /* Begin PBXFileReference section */
 		E65765A917B6E85900C44B61 /* CFBurstTrieSpeedTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFBurstTrieSpeedTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65765AC17B6E85900C44B61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E65765AF17B6E85900C44B61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E65765AF17B6E85900C44B61 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		E65765B217B6E85900C44B61 /* CFBurstTrieSpeedTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CFBurstTrieSpeedTest-Prefix.pch"; sourceTree = "<group>"; };
 		E65765B317B6E85900C44B61 /* CFBurstTrieSpeedTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CFBurstTrieSpeedTest.1; sourceTree = "<group>"; };
+		E65765BA17B6E88500C44B61 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		E65765BC17B6E8F500C44B61 /* CFBurstTrie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFBurstTrie.h; sourceTree = "<group>"; };
+		E65765C017B6EDFC00C44B61 /* wordList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wordList.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +51,7 @@
 		E65765A017B6E85900C44B61 = {
 			isa = PBXGroup;
 			children = (
+				E65765BA17B6E88500C44B61 /* LICENSE.txt */,
 				E65765AE17B6E85900C44B61 /* CFBurstTrieSpeedTest */,
 				E65765AB17B6E85900C44B61 /* Frameworks */,
 				E65765AA17B6E85900C44B61 /* Products */,
@@ -73,8 +77,10 @@
 		E65765AE17B6E85900C44B61 /* CFBurstTrieSpeedTest */ = {
 			isa = PBXGroup;
 			children = (
-				E65765AF17B6E85900C44B61 /* main.m */,
+				E65765AF17B6E85900C44B61 /* main.mm */,
+				E65765BC17B6E8F500C44B61 /* CFBurstTrie.h */,
 				E65765B317B6E85900C44B61 /* CFBurstTrieSpeedTest.1 */,
+				E65765C017B6EDFC00C44B61 /* wordList.txt */,
 				E65765B117B6E85900C44B61 /* Supporting Files */,
 			);
 			path = CFBurstTrieSpeedTest;
@@ -139,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E65765B017B6E85900C44B61 /* main.m in Sources */,
+				E65765B017B6E85900C44B61 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
