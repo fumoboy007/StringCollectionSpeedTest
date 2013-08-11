@@ -26,6 +26,9 @@ int main(int argc, const char * argv[]) {
 		__block clock_t burstTrieInsertElapsedTime = 0, cocoaSetInsertElapsedTime = 0, cppSetInsertElapsedTime = 0;
 		
 		[wordList enumerateLinesUsingBlock:^(NSString *word, BOOL *stop) {
+			word = [word mutableCopy];
+			
+			
 			clock_t startTime, endTime;
 			
 			
@@ -79,7 +82,7 @@ int main(int argc, const char * argv[]) {
 				
 				string substring = characters.substr(0, length);
 				
-				NSString *randomSubstring = [NSString stringWithCString:substring.c_str() encoding:NSASCIIStringEncoding];
+				NSString *randomSubstring = [NSMutableString stringWithCString:substring.c_str() encoding:NSASCIIStringEncoding];
 				
 				[stringsToTest addObject:randomSubstring];
 				cppStringsToTest.push_back([randomSubstring cppString]);
@@ -87,46 +90,46 @@ int main(int argc, const char * argv[]) {
 		}
 		
 		
-		double burstTrieElapsedTime, cocoaSetElapsedTime, cppSetElapsedTime;
-		clock_t startTime, endTime;
+		clock_t burstTrieSearchElapsedTime = 0, cocoaSetSearchElapsedTime = 0, cppSetSearchElapsedTime = 0;
+		clock_t startTime = 0, endTime = 0;
 		
-		
-		startTime = clock();
 		
 		for (NSString *string in stringsToTest) {
+			startTime = clock();
+			
 			CFBurstTrieContains(burstTrie, (__bridge CFStringRef)string, CFRangeMake(0, [string length]), NULL);
+			
+			endTime = clock();
+			
+			burstTrieSearchElapsedTime += endTime - startTime;
 		}
 		
-		endTime = clock();
-		
-		burstTrieElapsedTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-		
-		
-		startTime = clock();
 		
 		for (NSString *string in stringsToTest) {
+			startTime = clock();
+			
 			[cocoaSet containsObject:string];
+			
+			endTime = clock();
+			
+			cocoaSetSearchElapsedTime += endTime - startTime;
 		}
 		
-		endTime = clock();
-		
-		cocoaSetElapsedTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-		
-		
-		startTime = clock();
 		
 		for (const auto& string : cppStringsToTest) {
+			startTime = clock();
+			
 			cppSet.count(string);
+			
+			endTime = clock();
+			
+			cppSetSearchElapsedTime += endTime - startTime;
 		}
 		
-		endTime = clock();
 		
-		cppSetElapsedTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-		
-		
-		cout << "CFBurstTrie contains: " << burstTrieElapsedTime << " seconds" << endl;
-		cout << "NSMutableSet contains: " << cocoaSetElapsedTime << " seconds" << endl;
-		cout << "unordered_set contains: " << cppSetElapsedTime << " seconds" << endl;
+		cout << "CFBurstTrie search: " << (double)burstTrieSearchElapsedTime / CLOCKS_PER_SEC << " seconds" << endl;
+		cout << "NSMutableSet search: " << (double)cocoaSetSearchElapsedTime / CLOCKS_PER_SEC << " seconds" << endl;
+		cout << "unordered_set search: " << (double)cppSetSearchElapsedTime / CLOCKS_PER_SEC << " seconds" << endl;
 		
 		
 		CFRelease(burstTrie);
