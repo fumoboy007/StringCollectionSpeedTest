@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E62794D817B828D3002BD8B5 /* NSString+CPPConversors.mm in Sources */ = {isa = PBXBuildFile; fileRef = E62794D717B828D3002BD8B5 /* NSString+CPPConversors.mm */; };
 		E65765AD17B6E85900C44B61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65765AC17B6E85900C44B61 /* Foundation.framework */; };
 		E65765B017B6E85900C44B61 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E65765AF17B6E85900C44B61 /* main.mm */; };
-		E65765B417B6E85900C44B61 /* CFBurstTrieSpeedTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E65765B317B6E85900C44B61 /* CFBurstTrieSpeedTest.1 */; };
+		E65765B417B6E85900C44B61 /* StringCollectionSpeedTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E65765B317B6E85900C44B61 /* StringCollectionSpeedTest.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,18 +20,20 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				E65765B417B6E85900C44B61 /* CFBurstTrieSpeedTest.1 in CopyFiles */,
+				E65765B417B6E85900C44B61 /* StringCollectionSpeedTest.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E65765A917B6E85900C44B61 /* CFBurstTrieSpeedTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFBurstTrieSpeedTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62794D617B828D3002BD8B5 /* NSString+CPPConversors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CPPConversors.h"; sourceTree = "<group>"; };
+		E62794D717B828D3002BD8B5 /* NSString+CPPConversors.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSString+CPPConversors.mm"; sourceTree = "<group>"; };
+		E65765A917B6E85900C44B61 /* StringCollectionSpeedTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringCollectionSpeedTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65765AC17B6E85900C44B61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E65765AF17B6E85900C44B61 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
-		E65765B217B6E85900C44B61 /* CFBurstTrieSpeedTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CFBurstTrieSpeedTest-Prefix.pch"; sourceTree = "<group>"; };
-		E65765B317B6E85900C44B61 /* CFBurstTrieSpeedTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CFBurstTrieSpeedTest.1; sourceTree = "<group>"; };
+		E65765B217B6E85900C44B61 /* StringCollectionSpeedTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StringCollectionSpeedTest-Prefix.pch"; sourceTree = "<group>"; };
+		E65765B317B6E85900C44B61 /* StringCollectionSpeedTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = StringCollectionSpeedTest.1; sourceTree = "<group>"; };
 		E65765BA17B6E88500C44B61 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		E65765BC17B6E8F500C44B61 /* CFBurstTrie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFBurstTrie.h; sourceTree = "<group>"; };
 		E65765C017B6EDFC00C44B61 /* wordList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wordList.txt; sourceTree = "<group>"; };
@@ -52,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				E65765BA17B6E88500C44B61 /* LICENSE.txt */,
-				E65765AE17B6E85900C44B61 /* CFBurstTrieSpeedTest */,
+				E65765AE17B6E85900C44B61 /* StringCollectionSpeedTest */,
 				E65765AB17B6E85900C44B61 /* Frameworks */,
 				E65765AA17B6E85900C44B61 /* Products */,
 			);
@@ -61,7 +64,7 @@
 		E65765AA17B6E85900C44B61 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E65765A917B6E85900C44B61 /* CFBurstTrieSpeedTest */,
+				E65765A917B6E85900C44B61 /* StringCollectionSpeedTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,22 +77,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E65765AE17B6E85900C44B61 /* CFBurstTrieSpeedTest */ = {
+		E65765AE17B6E85900C44B61 /* StringCollectionSpeedTest */ = {
 			isa = PBXGroup;
 			children = (
 				E65765AF17B6E85900C44B61 /* main.mm */,
 				E65765BC17B6E8F500C44B61 /* CFBurstTrie.h */,
-				E65765B317B6E85900C44B61 /* CFBurstTrieSpeedTest.1 */,
+				E62794D617B828D3002BD8B5 /* NSString+CPPConversors.h */,
+				E62794D717B828D3002BD8B5 /* NSString+CPPConversors.mm */,
+				E65765B317B6E85900C44B61 /* StringCollectionSpeedTest.1 */,
 				E65765C017B6EDFC00C44B61 /* wordList.txt */,
 				E65765B117B6E85900C44B61 /* Supporting Files */,
 			);
-			path = CFBurstTrieSpeedTest;
+			path = StringCollectionSpeedTest;
 			sourceTree = "<group>";
 		};
 		E65765B117B6E85900C44B61 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E65765B217B6E85900C44B61 /* CFBurstTrieSpeedTest-Prefix.pch */,
+				E65765B217B6E85900C44B61 /* StringCollectionSpeedTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -97,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E65765A817B6E85900C44B61 /* CFBurstTrieSpeedTest */ = {
+		E65765A817B6E85900C44B61 /* StringCollectionSpeedTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E65765B717B6E85900C44B61 /* Build configuration list for PBXNativeTarget "CFBurstTrieSpeedTest" */;
+			buildConfigurationList = E65765B717B6E85900C44B61 /* Build configuration list for PBXNativeTarget "StringCollectionSpeedTest" */;
 			buildPhases = (
 				E65765A517B6E85900C44B61 /* Sources */,
 				E65765A617B6E85900C44B61 /* Frameworks */,
@@ -109,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = CFBurstTrieSpeedTest;
-			productName = CFBurstTrieSpeedTest;
-			productReference = E65765A917B6E85900C44B61 /* CFBurstTrieSpeedTest */;
+			name = StringCollectionSpeedTest;
+			productName = StringCollectionSpeedTest;
+			productReference = E65765A917B6E85900C44B61 /* StringCollectionSpeedTest */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -123,7 +128,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Darren Mo";
 			};
-			buildConfigurationList = E65765A417B6E85900C44B61 /* Build configuration list for PBXProject "CFBurstTrieSpeedTest" */;
+			buildConfigurationList = E65765A417B6E85900C44B61 /* Build configuration list for PBXProject "StringCollectionSpeedTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -135,7 +140,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E65765A817B6E85900C44B61 /* CFBurstTrieSpeedTest */,
+				E65765A817B6E85900C44B61 /* StringCollectionSpeedTest */,
 			);
 		};
 /* End PBXProject section */
@@ -146,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65765B017B6E85900C44B61 /* main.mm in Sources */,
+				E62794D817B828D3002BD8B5 /* NSString+CPPConversors.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,25 +231,29 @@
 		E65765B817B6E85900C44B61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CFBurstTrieSpeedTest/CFBurstTrieSpeedTest-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "StringCollectionSpeedTest/StringCollectionSpeedTest-Prefix.pch";
+				PRODUCT_NAME = StringCollectionSpeedTest;
 			};
 			name = Debug;
 		};
 		E65765B917B6E85900C44B61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CFBurstTrieSpeedTest/CFBurstTrieSpeedTest-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "StringCollectionSpeedTest/StringCollectionSpeedTest-Prefix.pch";
+				PRODUCT_NAME = StringCollectionSpeedTest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E65765A417B6E85900C44B61 /* Build configuration list for PBXProject "CFBurstTrieSpeedTest" */ = {
+		E65765A417B6E85900C44B61 /* Build configuration list for PBXProject "StringCollectionSpeedTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E65765B517B6E85900C44B61 /* Debug */,
@@ -252,13 +262,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E65765B717B6E85900C44B61 /* Build configuration list for PBXNativeTarget "CFBurstTrieSpeedTest" */ = {
+		E65765B717B6E85900C44B61 /* Build configuration list for PBXNativeTarget "StringCollectionSpeedTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E65765B817B6E85900C44B61 /* Debug */,
 				E65765B917B6E85900C44B61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
